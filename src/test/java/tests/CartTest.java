@@ -5,16 +5,13 @@ import org.testng.annotations.Test;
 
 import base.BaseTest;
 import pages.CartPage;
-import pages.HomePage;
 import pages.ProductsPage;
 
 public class CartTest extends BaseTest{
 	
 	//Add product & verify it appears
 	@Test
-	public void addProductToCartTest() {
-		HomePage hp=new HomePage(getDriver());
-		
+	public void addProductToCartTest() {		
 		ProductsPage pp=new ProductsPage(getDriver());
 		pp.clickProductsMenu();
 		String expectedPrice = pp.getProductPrice("Blue Top");
@@ -30,9 +27,7 @@ public class CartTest extends BaseTest{
 	
 	//Remove product & verify it disappears
 	@Test
-	public void removeProductTest(){
-		HomePage hp=new HomePage(getDriver());
-		
+	public void removeProductTest(){		
 		ProductsPage pp=new ProductsPage(getDriver());
 		pp.clickProductsMenu();
 		pp.addProductToCart("Summer White Top");
@@ -47,8 +42,6 @@ public class CartTest extends BaseTest{
 	//Verify cart count updates
 	@Test
 	public void verifyCartCountTest() {
-        HomePage hp = new HomePage(getDriver());
-
         ProductsPage pp = new ProductsPage(getDriver());
         pp.clickProductsMenu();
         int before = 0;

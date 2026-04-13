@@ -1,5 +1,5 @@
 <suite name="Automation Suite">
-	<test name="Functional Tests" parallel="tests" thread-count="2">
+	<test name="Functional Tests" parallel="tests" thread-count="2" >
         <classes>
             <class name="tests.LoginTest"/>
             <class name="tests.RegisterTest"/>
