@@ -1,0 +1,21 @@
+<suite name="Automation Suite">
+	<test name="Functional Tests" parallel="tests" thread-count="2">
+        <classes>
+            <class name="tests.LoginTest"/>
+            <class name="tests.RegisterTest"/>
+            <class name="tests.ProductsTest"/>
+            <class name="tests.CartTest"/>
+            <class name="tests.CheckoutTest"/>
+        </classes>
+	</test>
+	
+	<test name="End To End Test">
+        <classes>
+            <class name="tests.EndToEndTest"/>
+        </classes>
+    </test>
+    
+    <listeners>
+        <listener class-name="listeners.TestListener"/>
+    </listeners>
+</suite>
